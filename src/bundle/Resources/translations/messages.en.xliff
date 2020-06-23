@@ -414,6 +414,11 @@
         <target state="new">'%content_name%' is in use by %reverse_relations% Content item(s). You should remove all reverse Relations before deleting the Content item.</target>
         <note>key: trash_container.modal.message_relations</note>
       </trans-unit>
+      <trans-unit id="852a288436c873551e52c9fa2546b32db5ce3038" resname="users_fetch_error">
+        <source>Users list fetching error</source>
+        <target state="new">Users list fetching error</target>
+        <note>key: users_fetch_error</note>
+      </trans-unit>
     </body>
   </file>
 </xliff>

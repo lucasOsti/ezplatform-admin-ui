@@ -20,6 +20,7 @@
     const btns = doc.querySelectorAll('.btn--open-udw');
     const udwContainer = doc.getElementById('react-udw');
     const autoSendNodes = doc.querySelectorAll('.ez-trash-search-form__item--auto-send');
+    const errorMessage = Translator.trans(/*@Desc("Users list fetching error")*/ 'users_fetch_error', {}, 'messages');
     const dateConfig = {
         mode: 'range',
         locale: {
@@ -222,7 +223,7 @@
         }
     };
     const getUnixTimestampUTC = (dateObject) => {
-        date = new Date(Date.UTC(dateObject.getFullYear(), dateObject.getMonth(), dateObject.getDate()));
+        let date = new Date(Date.UTC(dateObject.getFullYear(), dateObject.getMonth(), dateObject.getDate()));
         date = Math.floor(date.getTime() / 1000);
 
         return date;
@@ -246,8 +247,7 @@
     };
     const setSortedClass = () => {
         doc.querySelectorAll('.ez-table__sort-column').forEach((node) => {
-            node.classList.remove(CLASS_SORTED_ASC);
-            node.classList.remove(CLASS_SORTED_DESC);
+            node.classList.remove(CLASS_SORTED_ASC, CLASS_SORTED_DESC);
         });
 
         if (sortedActiveField) {

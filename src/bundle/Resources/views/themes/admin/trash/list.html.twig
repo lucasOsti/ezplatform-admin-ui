@@ -42,7 +42,6 @@
                                     placeholder="{{ 'search.creator_input.placeholder'|trans|desc('Type creator\'s name') }}"
                                     {{ creator is not empty ? 'disabled'  }}
                                 >
-                                
                                 <button class="btn btn-icon ez-btn--reset-creator">
                                     <svg class="ez-icon ez-icon--dark ez-icon--medium ez-icon--reset">
                                         <use xlink:href="/bundles/ezplatformadminui/img/ez-icons.svg#circle-close"></use>
@@ -53,7 +52,6 @@
                         </div>
 
                         {{ form_widget(form_search.creator, {'attr': {'hidden': 'hidden'}}) }}
-
                         {{ form_widget(form_search.sort, {'attr': {'hidden': 'hidden'}}) }}
                         {{ form_widget(form_search.trashed_interval, {'attr': {'hidden': 'hidden'}}) }}
                     </div>
@@ -220,7 +218,6 @@
             </div>
         {% endif %}
     </div>
-    
 {% endblock %}
 
 {% block react_modules %}
