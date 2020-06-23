@@ -73,10 +73,6 @@
     <input type="checkbox" {{ block('widget_attributes') }}{% if value is defined %} value="{{ value }}"{% endif %}{% if checked %} checked="checked"{% endif %} />
 {%- endblock -%}
 
-{%-block _test_widget %}
-    aaaa
-{% endblock %}
-
 {%- block _trash_item_restore_restore_widget -%}
     {%- set type = type|default('submit') -%}
     {%- if label is not same as(false) and label is empty -%}
